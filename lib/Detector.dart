@@ -207,12 +207,6 @@ class Detector {
         otherPattern.dy.toInt(),
         pattern.dx.toInt(),
         pattern.dy.toInt());
-    if (moduleSizeEst1 == double.nan) {
-      return moduleSizeEst2 / 7.0;
-    }
-    if (moduleSizeEst2 == double.nan) {
-      return moduleSizeEst1 / 7.0;
-    }
     // Average them, and divide by 7 since we've counted the width of 3 black modules,
     // and 1 white and 1 black module on either side. Ergo, divide sum by 14.
     return (moduleSizeEst1 + moduleSizeEst2) / 14.0;
